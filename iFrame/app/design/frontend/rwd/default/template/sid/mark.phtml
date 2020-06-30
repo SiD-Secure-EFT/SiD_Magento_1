@@ -1,0 +1,15 @@
+<?php
+/*
+ * Copyright (c) 2020 PayGate (Pty) Ltd
+ *
+ * Author: App Inlet (Pty) Ltd
+ *
+ * Released under the GNU General Public License
+ */
+if ( (int) Mage::getStoreConfig( 'payment/sid/display_additional_info_href' ) === 1 ):
+    $_link = Mage::getStoreConfig( 'payment/sid/additional_info_href' );?>
+       <a href="<?php echo $_link; ?>" style="padding-left: 12px;"
+                onclick="javascript:window.open('<?php echo $_link; ?>','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, left=0, top=0, width=400, height=350');
+                return false;"><?php echo $this->__( 'Instant EFT' ); ?>
+        </a>
+    <?php endif;?>
