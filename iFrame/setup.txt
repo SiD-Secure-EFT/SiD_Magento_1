@@ -1,0 +1,32 @@
+PLEASE NOTE: This module was created and tested for Magetno 1.9.3.6
+**********************************************************************
+Please follow the below steps to setup the SID payment gateway in Magento
+
+1) Copy and paste the app, skin and js folders into your Magento site root
+    (where the Magento app folder is situated)
+
+2) In your site's admin section
+
+        a) Click on the System-Cache Mangement top menu item.
+        b) Select all checkboxes, select the refresh action and click on the submit button.
+
+3) Go to your site's admin section (e.g. http://<YOUR_SITE>/admin)
+	a) Click on the System->Configuration top menu item.
+	b) Click on the Sales->Payment Methods left menu item.
+	c) Expand the SID Instant EFT item, set enabled to true and update the settings with your SID details.
+	d) Click the save config button on the top right of the screen.
+
+4) In your site's admin section
+
+        a) Click on the System-Cache Mangement top menu item.
+        b) Select all checkboxes, select the refresh action and click on the submit button.
+
+Please email support@setcom.com to set the redirect URLs for you on your account. 
+Please include your SID_merchant value when you email the redirect URLs.
+Please email support@setcom.com for any assistance.
+
+Redirect: http://<site>/sid/redirect/index
+
+Notify: http://<site>/sid/notify     
+
+

@@ -1,0 +1,26 @@
+<!--
+/*
+ * Copyright (c) 2020 PayGate (Pty) Ltd
+ *
+ * Author: App Inlet (Pty) Ltd
+ * 
+ * Released under the GNU General Public License
+ */
+-->
+<html>
+    <body>
+        <div>Please wait while you are being redirected...</div>
+        <form name="paymentForm" id="paymentForm" action="<?php echo($this->getPaymentUrl()); ?>" method="POST">
+            <?php 
+                $formFields = $this->getCheckoutFormFields();
+                
+                foreach($formFields as $key => $value) :
+            ?>
+                <input type="hidden" name="<?php echo($key); ?>" value="<?php echo($value); ?>" />
+            <?php
+                endforeach;
+            ?>
+        </form>
+        <script type="text/javascript">document.getElementById("paymentForm").submit();</script>
+    </body>
+</html>

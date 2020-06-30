@@ -1,0 +1,16 @@
+<?php
+/*
+ * Copyright (c) 2020 PayGate (Pty) Ltd
+ *
+ * Author: App Inlet (Pty) Ltd
+ *
+ * Released under the GNU General Public License
+ */
+/** Setcom_SID_Block_Form $this  */
+if ( (int) Mage::getStoreConfig( 'payment/sid/display_sid_info' ) === 1 ): ?>
+    <ul class="form-list checkout-agreements" id="payment_form_<?php echo $this->getMethodCode() ?>" style="display:none;">
+        <li>
+            <?php echo $this->getLayout()->createBlock( 'cms/block' )->setBlockId( 'sid_eft_payment_information' )->toHtml(); ?>
+        </li>
+    </ul>
+<?php endif;?>
